@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Contact</title>
+  </head>
+  <body>
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
+    <nav>
+      <ul class="nav_links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a class = "current" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    
+    <main>
+
+      <header id="main">
+        <h1> Saucy Succulents</h1>
+      </header>
+
+      <p>If interested in purchasing a succulent, please complete this form. <br>
+        I will get back to you within 48 hours.</p>
+
+      <p>I am currently based out of Los Angeles, but I am able to ship all around the US at a slight additional cost.<br>
+         I can provide a final price once I know what you are looking for.</p>
+      
+      <div>
+        <form action="https://formspree.io/f/mvovaebb" method="POST">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name..">
+      
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" placeholder="Your email..">
+      
+          <label for="alcohol">Type of container</label>
+          <select id="alcohol" name="alcohol">
+            <option value="wine">Wine ($15)</option>
+            <option value="beer">Beer ($12) </option>
+            <option value="liquor">Liquor ($17) </option>
+            <option value="candle">Candle ($15) </option>
+          </select>
+          
+          <label for="brand">Alcohol Brand Preference</label>
+          <input type="text" id="brand" name="brand" placeholder="Your preference..">
+        
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </main>
+    
+
+    <footer>
+      <p>@thesaucysucculents</p>
+    </footer>
+  </body>
+</html>
+    

@@ -1,0 +1,280 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+  font-family: courier;
+}
+
+h1{
+  font-size: 50px;
+  line-height: 1;
+  /* padding: 50px 0; */
+  text-align: center;
+}
+
+header{
+  background-color: #F3EAE6;
+  font-size: 35px;
+  text-align: center;
+}
+
+h1{
+  color: grey;
+  padding: 10px;
+}
+
+main p{
+  color: #222222;
+  background-color: #f1f1f1;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/* changing format of image on Home page */
+main img{
+  display:block;
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+
+
+/* Style the links inside the navigation bar */
+nav{
+  text-align: center;
+  background-color: #F3EAE6;
+  font-family: fantasy;
+}
+
+.nav_links{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+nav a {
+  float: left;
+  color: black;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+nav a:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+.nav_links .current{
+  background-color: #656565;
+  color: white;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+  position: absolute;
+  top: -40px;
+}
+
+.skip a:focus{
+  top: 0px;
+}
+
+*:focus {
+  border: 2px solid black;
+}
+
+/*footer styling*/
+footer{
+  background-color: #F9DFD4;
+  color: black;
+  padding: 20px;
+  text-align: center;
+}
+
+/*form styling*/
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/*home page grid styling*/
+.bucket{
+  display:grid;
+  grid-template-columns: 1fr 10fr 10fr 1fr;
+  background-color: #f1f1f1;
+}
+
+.bucket img{
+  width: 100%;
+  height: auto;
+}
+
+.text{
+  grid-column: 2/4;
+  grid-row: 1;
+}
+
+.homepage-image{
+  grid-column: 2/4;
+  grid-row: 2;
+}
+
+.lookingdown-image{
+  grid-column: 3/4;
+  grid-row: 5;
+}
+
+.coronaongravel-image{
+  grid-column: 2/3;
+  grid-row: 4/6;
+}
+
+.skybackground-image{
+  grid-column: 2/3;
+  grid-row: 4;
+}
+
+.counter-image{
+  grid-column: 3/4;
+  grid-row: 3/5;
+}
+
+.candlecasa-image{
+  grid-column: 2/3;
+  grid-row: 3;
+}
+
+/*product grid styling*/
+.container{
+  display: grid;
+  grid-template-columns: 1fr 7fr 1fr;
+  grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto;
+  background-color: #f1f1f1;
+}
+
+.container img{
+  width: 100%;
+  height: auto;
+  border: 2px solid grey;
+}
+
+.container p{
+  grid-column: 2;
+  grid-row: 1 / 2;
+  color: #222222;
+}
+
+.corona-image, .coke-image, .yeswayrose-image, .absolute-image, .candles-image, .kombucha-image, .ciroc-image, .summerwater-image, .modelo-image{
+  grid-column: 2;
+  padding-top: 15px;
+}
+
+.corona-image{
+  grid-row: 2 / 3;
+}
+
+.coke-image{
+  grid-row: 3 / 4;
+}
+
+.yeswayrose-image{
+  grid-row: 4 / 5;
+}
+
+.absolute-image{
+  grid-row: 5 / 6;
+}
+
+.candles-image{
+  grid-row: 6 / 7;
+}
+
+.kombucha-image{
+  grid-row: 7 / 8;
+}
+
+.ciroc-image{
+  grid-row: 8 / 9;
+}
+
+.summerwater-image{
+  grid-row: 9 / 10;
+}
+
+.modelo-image{
+  grid-row: 10 / 11;
+  padding-bottom: 15px;
+}
+
+/*form styling*/
+input[type=submit] {
+  width: 100%;
+  background-color: lightgray;
+  color:black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/*form styling*/
+input[type=submit]:hover {
+  background-color: grey;
+}
+
+/*form styling*/
+form{
+  background-color:#f1f1f1;
+  padding: 20px;
+}
+
+
+
+
+
+
+@media all and (min-width: 800px){
+
+}
+
+/*You do not need to modify any code below this line.
+It is included for accessibility to turn off animations
+and movement for people who have modified their 
+preferences to reduce motion.*/
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  .skip a{
+    -webkit-transition: none; /* sets to default setting */
+    transition: none;        /* sets to default setting */
+   }
+
+  /*Turn off parallax*/
+  header{
+    background-attachment: initial;
+  }
+}
