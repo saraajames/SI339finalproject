@@ -117,6 +117,19 @@ input[type=text], select {
   box-sizing: border-box;
 }
 
+/*contact flex styling*/
+.baggie{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #f1f1f1;
+}
+
+.baggie img{
+  max-width: 49%;
+  height: auto;
+}
+
 /*home page grid styling*/
 .bucket{
   display:grid;
@@ -137,11 +150,13 @@ input[type=text], select {
 .homepage-image{
   grid-column: 2/4;
   grid-row: 2;
+  padding-bottom: 4px;
 }
 
-.lookingdown-image{
-  grid-column: 3/4;
-  grid-row: 5;
+.skybackground-image{
+  grid-column: 2/3;
+  grid-row: 3/4;
+  padding-bottom: 4px;
 }
 
 .coronaongravel-image{
@@ -149,19 +164,17 @@ input[type=text], select {
   grid-row: 4/6;
 }
 
-.skybackground-image{
-  grid-column: 2/3;
-  grid-row: 4;
-}
 
 .counter-image{
   grid-column: 3/4;
   grid-row: 3/5;
+  padding-bottom: 4px;
 }
 
 .candlecasa-image{
-  grid-column: 2/3;
-  grid-row: 3;
+  grid-column: 3/4;
+  grid-row: 5;
+  padding-bottom: 4px;
 }
 
 /*product grid styling*/
