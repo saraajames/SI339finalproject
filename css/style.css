@@ -262,8 +262,21 @@ form{
   padding: 20px;
 }
 
+/*animation*/
+#main{
+  animation-name: header_wiggle;
+  animation-duration: 4s;
+}
 
+@-webkit-keyframes header_wiggle{
+  50%  {background-color:black;}
+  100% {background-color:#F3EAE6}
+}
 
+@keyframes header_wiggle{
+  50%  {background-color:black;}
+  100% {background-color:#F3EAE6}
+}
 
 
 
@@ -289,5 +302,12 @@ preferences to reduce motion.*/
   /*Turn off parallax*/
   header{
     background-attachment: initial;
+  }
+}
+
+/* reduced motion media query */
+@media (prefers-reduced-motion){
+  #main{
+    animation: none;
   }
 }
