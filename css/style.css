@@ -3,7 +3,7 @@ html{
 }
 
 body{
-  font-family: courier;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1{
@@ -22,6 +22,7 @@ header{
 h1{
   color: grey;
   padding: 10px;
+  font-family: courier;
 }
 
 main p{
@@ -106,6 +107,17 @@ footer{
   text-align: center;
 }
 
+footer a{
+  font-size: 15px;
+  color: black;
+}
+
+footer a:hover{
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+
 /*form styling*/
 input[type=text], select {
   width: 100%;
@@ -123,10 +135,11 @@ input[type=text], select {
   flex-direction: row;
   align-items: center;
   background-color: #f1f1f1;
+  overflow: hidden;
 }
 
 .baggie img{
-  max-width: 49%;
+  max-width: 50%;
   height: auto;
 }
 
@@ -150,30 +163,27 @@ input[type=text], select {
 .homepage-image{
   grid-column: 2/4;
   grid-row: 2;
-  padding-bottom: 4px;
+  /* padding-bottom: 4px; */
 }
 
 .skybackground-image{
   grid-column: 2/3;
   grid-row: 3/4;
-  padding-bottom: 4px;
+  /* padding-bottom: 4px; */
 }
 
 .coronaongravel-image{
-  grid-column: 2/3;
-  grid-row: 4/6;
+  visibility: hidden;
 }
 
 
 .counter-image{
-  grid-column: 3/4;
-  grid-row: 3/5;
-  padding-bottom: 4px;
+  visibility: hidden;
 }
 
 .candlecasa-image{
   grid-column: 3/4;
-  grid-row: 5;
+  grid-row: 3/4;
   padding-bottom: 4px;
 }
 
@@ -278,36 +288,267 @@ form{
   100% {background-color:#F3EAE6}
 }
 
+/* tablet view */
+@media screen and (min-width: 750px){
+  /* tablet nav links */
+  .nav_links{
+    flex-direction: row;
+    justify-content: center;
+  }
+  .nav_links a{
+    padding: 20px;
+  }
 
+  /* tablet view product page*/
+  .container{
+    grid-template-columns: 1fr 7fr 7fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    background-color: #f1f1f1;
+  }
+  
+  .container img{
+    width: 90%;
+    height: auto;
+    border: 2px solid grey;
+  }
+  
+  .container p{
+    grid-column: 2 / 5;
+    grid-row: 1 / 2;
+    color: #222222;
+  }
+  
+  .corona-image{
+    grid-column: 2;
+    grid-row: 2 / 3;
+  }
+  
+  .coke-image{
+    grid-column: 2;
+    grid-row: 3 / 4;
+  }
+  
+  .yeswayrose-image{
+    grid-column: 2;
+    grid-row: 4 / 5;
+  }
+  
+  .absolute-image{
+    grid-column: 3;
+    grid-row: 2 / 3;
+  }
+  
+  .candles-image{
+    grid-column: 3;
+    grid-row: 3 / 4;
+  }
+  
+  .kombucha-image{
+    grid-column: 3;
+    grid-row: 4 / 5;
+    padding-bottom: 10px;
+  }
+  
+  .ciroc-image{
+    grid-column: 2;
+    grid-row: 5 / 6;
+  }
+  
+  .summerwater-image{
+    grid-column: 2;
+    grid-row: 6 / 7;
+    padding-bottom: 10px;
+  }
+  
+  .modelo-image{
+    grid-column: 3;
+    grid-row: 5 / 6;
+  }
 
-@media all and (min-width: 800px){
+  /* tablet view about image*/
+  .about-img{
+    width: 60%;
+    height: auto;
+    margin: auto;
+    border: 4px solid grey;
+  }
+
+  /* tablet view contact form text*/
+  .contactform p{
+    font-size: 30px;
+  }
+
+  /*home page grid styling*/
+  .bucket{
+    grid-template-columns: 1fr 10fr 10fr 1fr;
+    background-color: #f1f1f1;
+  }
+
+  .bucket img{
+    width: 100%;
+    height: auto;
+  }
+
+  .text{
+    grid-column: 2/4;
+    grid-row: 1;
+  }
+
+  .homepage-image{
+    grid-column: 2/4;
+    grid-row: 2;
+    padding-bottom: 4px;
+  }
+
+  .skybackground-image{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    padding-bottom: 4px;
+  }
+
+  .coronaongravel-image{
+    visibility: visible;
+    grid-column: 2/3;
+    grid-row: 4/6;
+  }
+
+  .counter-image{
+    visibility: visible;
+    grid-column: 3/4;
+    grid-row: 3/5;
+    padding-bottom: 4px;
+  }
+
+  .candlecasa-image{
+    grid-column: 3/4;
+    grid-row: 5;
+    padding-bottom: 4px;
+  }
 
 }
 
-/*You do not need to modify any code below this line.
-It is included for accessibility to turn off animations
-and movement for people who have modified their 
-preferences to reduce motion.*/
-
-@media screen and (prefers-reduced-motion: reduce){
-  html{
-      scroll-behavior: auto; /* Removes scroll animation */
+/* desktop view */
+@media screen and (min-width: 900px){
+  .nav_links{
+    flex-direction: row;
+    justify-content: left;
+    /* padding: 20px; */
+  }
+  .nav_links a{
+    padding: 20px;
   }
 
-  .skip a{
-    -webkit-transition: none; /* sets to default setting */
-    transition: none;        /* sets to default setting */
-   }
+  .container{
+    grid-template-columns: 1fr 7fr 7fr 7fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    background-color: #f1f1f1;
+  }
+  
+  .container img{
+    width: 90%;
+    height: auto;
+    border: 2px solid grey;
+  }
+  
+  .container p{
+    grid-column: 2 / 5;
+    grid-row: 1 / 2;
+    color: #222222;
+  }
+  
+  .corona-image{
+    grid-column: 2;
+    grid-row: 2 / 3;
+  }
+  
+  .coke-image{
+    grid-column: 2;
+    grid-row: 3 / 4;
+  }
+  
+  .yeswayrose-image{
+    grid-column: 2;
+    grid-row: 4 / 5;
+  }
+  
+  .absolute-image{
+    grid-column: 3;
+    grid-row: 2 / 3;
+  }
+  
+  .candles-image{
+    grid-column: 3;
+    grid-row: 3 / 4;
+  }
+  
+  .kombucha-image{
+    grid-column: 3;
+    grid-row: 4 / 5;
+    padding-bottom: 10px;
+  }
+  
+  .ciroc-image{
+    grid-column: 4;
+    grid-row: 2 / 3;
+  }
+  
+  .summerwater-image{
+    grid-column: 4;
+    grid-row: 3 / 4;
+  }
+  
+  .modelo-image{
+    grid-column: 4;
+    grid-row: 4 / 5;
+  }
 
-  /*Turn off parallax*/
-  header{
-    background-attachment: initial;
+  /*animation - about img*/
+  .about-img{
+    animation-name: about-fade;
+    animation-duration: 5s;
+    width: 50%;
+    height: auto;
+    margin: auto;
+    border: 4px solid grey;
+  }
+
+  /*contact flex styling*/
+  .baggie{
+    flex-direction: row;
+    align-items: center;
+    background-color: #f1f1f1;
+  }
+
+  .baggie img{
+    width: 30%;
+    height: auto;
+  }
+
+  
+
+
+  @-webkit-keyframes about-fade{
+    10% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+  @keyframes about-fade{
+    10% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+  /*leah text bigger - about page*/
+  .about-leah p{
+    font-size: 30px;
   }
 }
 
 /* reduced motion media query */
 @media (prefers-reduced-motion){
   #main{
+    animation: none;
+  }
+  .about-img{
     animation: none;
   }
 }
